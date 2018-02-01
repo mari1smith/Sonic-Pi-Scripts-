@@ -1,0 +1,53 @@
+# Welcome to Sonic Pi v2.11.1
+use_bpm 160
+live_loop :baba do
+  play :c4
+  sleep 1
+  play :E4
+  sleep 1
+  play :G4
+  sleep 1
+  play :B4
+  sleep 1
+  play :B4
+  sleep 1
+  play :G4
+  sleep 1
+  play :E4
+  sleep 1
+  play :c4
+  sleep 1
+  play :c4
+  sleep 1
+  play :E4
+  sleep 1
+  play :G4
+  sleep 1
+  play :B4
+  sleep 1
+  play :B4
+  sleep 1
+  play :G4
+  sleep 1
+  play :E4
+  sleep 1
+  play :c4
+  sleep 1
+  play :c4
+  sleep 1
+  play :E4
+  sleep 1
+  play :G4
+  sleep 1
+  play :B4
+  sleep 1
+  play :B4
+  sleep 1
+  play :G4
+  sleep 1
+  play :E4
+  sleep 1
+  play :c4
+  sleep 1
+  
+end
