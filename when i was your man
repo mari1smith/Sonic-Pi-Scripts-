@@ -1,0 +1,25 @@
+use_bpm 116
+
+play:f5
+sleep 0.25
+play:e5
+sleep 0.25
+play:e5
+sleep 0.5
+play:e5
+sleep 0.5
+play:c5
+sleep 0.5
+play:a5
+sleep 0.5
+play:g5
+sleep 0.25
+play:e5
+sleep 0.25
+play:g5
+sleep 0.5
+play:a5
+sleep 0.25
+play:e5
+sleep 0.25
+
