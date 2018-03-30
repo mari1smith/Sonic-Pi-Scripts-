@@ -1,0 +1,53 @@
+use_bpm 140
+ash = "C:/Users/amari_smith/Documents/Audacity/2loveontop2.wav"
+blow = "C:/Users/amari_smith/Documents/Audacity/blow2.wav"
+pop = "C:/Users/amari_smithDownloads"
+power="C:/Users/amari_smith/Downloads/super.wav"
+
+1. times do
+  sample ash
+  sleep 25
+end
+
+1. times  do
+  sample blow
+  sleep 1
+end
+
+use_synth :piano
+use_bpm 80
+sleep 25
+melody_notes = [:G2, :G2, :G2, :G2, :G2, :G2, :G2, :G3, :r, :r, :G3, :G2, :G3, :r, :r, :G3,  :G2, :G3, :r, :r, :G3]
+sleep_notes = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 1, 0.5]
+index= 0
+live_loop:malachichi do
+  20.times do
+    play melody_notes[index]
+    sleep sleep_notes[index]
+    index=index+1
+  end
+  index=0
+  sleep 100000000000
+end
+live_loop:hello do
+  1. times do
+    sample power
+    sleep 10000000000000
+  end
+end
+
+10.times do
+  use_octave [0,1].choose
+  play [ :a, :c, :b].choose
+  sleep [0.5, 0.5, 0.5,0.5].choose
+end
+
+melody_notes = [:E2, :E2, :E2, :E2, :E2, :E2, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3]
+weight = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5]
+index= 0
+21.times do
+  play melody_notes[index]
+  sleep weight[index]
+  index=index+1
+end
+index=0
