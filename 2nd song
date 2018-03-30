@@ -4,6 +4,7 @@ blow = "C:/Users/amari_smith/Documents/Audacity/blow2.wav"
 pop = "C:/Users/amari_smithDownloads"
 power="C:/Users/amari_smith/Downloads/super.wav"
 
+
 1. times do
   sample ash
   sleep 25
@@ -13,10 +14,11 @@ end
   sample blow
   sleep 1
 end
-
+#this is considered concurrent because both arrays are playing at the same time as the sample power
 use_synth :piano
 use_bpm 80
 sleep 25
+#arrays
 melody_notes = [:G2, :G2, :G2, :G2, :G2, :G2, :G2, :G3, :r, :r, :G3, :G2, :G3, :r, :r, :G3,  :G2, :G3, :r, :r, :G3]
 sleep_notes = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 1, 0.5]
 index= 0
