@@ -1,0 +1,14 @@
+# Welcome to Sonic Pi v2.11.1
+#WHEN I WAS YOUR MAN
+use_bpm 90
+use_synth :piano
+melody_notes = [:F5, :E5, :E5, :E5, :C5, :A5, :G5, :E5, :G5, :A5, :E5, :E5, :D5, :D5, :r, :G4, :A4,:C5, :E5, :E5, :A5, :A5, :A5, :G5, :E5, :G5, :A5, :E5, :E5, :D5, :D5, :r, :G4, :A4, :E5, :E5, :D5, :E5]
+sleep_notes = [0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.25, 0.75, 1, 0.5, 0.5, 0.5, 0.5, 0.75, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 1.75, 0.25, 0.25, 0.25, 0.25, 0.5,0.5]
+live_loop :melody do
+  index=0
+  19.times do
+    play melody_notes[index]
+    sleep sleep_notes[index]
+    index=index+1
+  end
+end
