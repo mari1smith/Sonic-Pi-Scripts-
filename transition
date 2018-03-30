@@ -1,0 +1,16 @@
+use_bpm 140
+ash = "C:/Users/amari_smith/Documents/Audacity/2loveontop2.wav"
+blow = "C:/Users/amari_smith/Documents/Audacity/blow2.wav"
+pop = "C:/Users/amari_smithDownloads"
+power="C:/Users/amari_smith/Downloads/super.wav"
+
+
+1. times do
+  sample ash
+  sleep 25
+end
+
+1. times  do
+  sample blow
+  sleep 1
+end
