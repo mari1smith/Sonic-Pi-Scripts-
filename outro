@@ -1,0 +1,6 @@
+21.times do
+  play melody_notes[index]
+  sleep weight[index]
+  index=index+1
+end
+index=0
