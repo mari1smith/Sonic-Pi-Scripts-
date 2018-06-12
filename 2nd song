@@ -1,8 +1,22 @@
 use_bpm 140
-ash = "C:/Users/amari_smith/Documents/Audacity/2loveontop2.wav"
-blow = "C:/Users/amari_smith/Documents/Audacity/blow2.wav"
-pop = "C:/Users/amari_smithDownloads"
-power="C:/Users/amari_smith/Downloads/super.wav"
+p=ash = "C:/Users/amari_smith/Documents/Audacity/2loveontop2.wav"
+g=blow = "C:/Users/amari_smith/Documents/Audacity/blow2.wav"
+m=pop = "C:/Users/amari_smithDownloads"
+k=power="C:/Users/amari_smith/Downloads/super.wav"
+a=0.5
+b=80
+
+lime_notes = [:E2, :E2, :E2, :E2, :E2, :E2, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3]
+weight = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5]
+define :boom_p do 
+  1.times do
+  index=0
+  21.times do 
+  play lime_notes[index], 
+  play weight[index]
+  index = index+ 1
+  
+end
 
 
 1. times do
@@ -28,6 +42,7 @@ live_loop:malachichi do
     sleep sleep_notes[index]
     index=index+1
   end
+  
   index=0
   sleep 100000000000
 end
@@ -38,18 +53,35 @@ live_loop:hello do
   end
 end
 
-10.times do
-  use_octave [0,1].choose
-  play [ :a, :c, :b].choose
-  sleep [0.5, 0.5, 0.5,0.5].choose
+q=drum_snare_hard
+w=drum_heavy_kick
+a=drum_cymbal_closed
+
+define :drum do
+  #the amp for the sample will be randomized because it is linked to the variable "r" which will randomly pick a rate value from 1.75 to 0.25
+  r = rrand_i(1.75,0.25)
+  sample q, amp: r
+  sleep 0.5
+  sample w, amp: r, 
+  sleep 0.5
+  sample a, amp: r
+  sleep 0.5
 end
 
-melody_notes = [:E2, :E2, :E2, :E2, :E2, :E2, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3, :E2, :G3, :r, :r, :G3]
-weight = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5]
-index= 0
-21.times do
-  play melody_notes[index]
-  sleep weight[index]
-  index=index+1
 end
-index=0
+
+define :limewater do |k, m| # names of sample sngs
+2.times do
+play k
+sleep m
+end
+
+limewater g, 1 
+limewater p, 1 
+limewater k, 1 
+limewater m, 1
+end
+
+ 
+
+
